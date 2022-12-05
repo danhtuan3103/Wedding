@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <audio class="audio" controls loop>
+        <audio class="audio" controls loop autoplay>
             <source src="./asset/music/wedding.ogg" type="audio/ogg">
             <source src="./asset/music/wedding.mp3" type="audio/mpeg">
         </audio>
@@ -300,19 +300,7 @@
                 btn.appendChild(pause);
                 audio.play();
             }
-        };
-
-        window.onload = () => {
-            const pause = document.createElement('span');
-            pause.classList.add('material-symbols-outlined', 'pause-icon');
-            pause.innerHTML = 'pause';
-            btn.querySelector('.play-icon').remove();
-            btn.appendChild(pause);
-            audio.play();
-        }
-        
-
-      
+        };   
 
         audio.onplaying = function() {
             isPlaying = true;
