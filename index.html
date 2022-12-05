@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <audio class="audio" controls loop autoplay>
+        <audio class="audio" controls loop >
             <source src="./asset/music/wedding.ogg" type="audio/ogg">
             <source src="./asset/music/wedding.mp3" type="audio/mpeg">
         </audio>
@@ -278,9 +278,20 @@
        
         var audio = document.querySelector('audio');
         var btn = document.querySelector('.play-btn');
-        console.log(btn)
 
-
+        window.onload = () => {
+            const isOpenMusic = confirm('Bạn có muốn bật nhạc không ?')
+            if(isOpenMusic) {
+                const pause = document.createElement('span');
+                pause.classList.add('material-symbols-outlined', 'pause-icon');
+                pause.innerHTML = 'pause';
+                btn.querySelector('.play-icon').remove();
+                btn.appendChild(pause);
+                audio.play();
+            }else {
+                return;
+            }
+        }
         var isPlaying = false;
         function togglePlay() {
             if(isPlaying) { 
@@ -288,8 +299,6 @@
                 play.classList.add('material-symbols-outlined', 'play-icon');
                 play.innerHTML = 'play_arrow';
                 btn.querySelector('.pause-icon').remove();
-                console.log(btn.querySelector('.pause-icon'));
-              
                 btn.appendChild(play);
                 audio.pause();
             }else {
@@ -348,10 +357,6 @@
             }
 
             }   
-
-
-
-
 
       </script>
 </body>
