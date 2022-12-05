@@ -279,7 +279,10 @@
         var audio = document.querySelector('audio');
         var btn = document.querySelector('.play-btn');
   
-      
+        window.onload = () => {
+            alert('Để có trải nghiệm tốt nhất bạn hãy bật nhạc ở nút dưới cùng bên trái và vuốt xuống thật chậm')
+        }
+        
         var isPlaying = false;
         function togglePlay() {
             if(isPlaying) { 
