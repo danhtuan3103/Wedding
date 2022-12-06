@@ -291,7 +291,6 @@
 
 .profile_block {
     margin: 24px;
-    
     padding-bottom: 24px;
     border-bottom: 1px solid #333;
 }
@@ -328,9 +327,6 @@
 
 }
 
-
-
-
   
   
 
@@ -359,6 +355,7 @@
 
 
 .story_content_content {
+    min-height: 500px;
     margin-bottom: 46px;
     padding: 12px 24px;
     display: flex;
@@ -424,9 +421,9 @@
     margin-top: 24px;
     text-align: center;
     min-height:100vh;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    flex-direction: column; */
+    flex-direction: column;
 }
 .album_img {
     margin: 24px;
